@@ -35,7 +35,7 @@ public class GameInteractions {
             System.out.println(String.format(String.valueOf(++count),teamName,score)); //using ++ we can increase by one and print out
         }
     }
-    public static int randomNumber (){
+    public static int randomNumber(){
         Random rand = new Random();
         HashSet<Integer> usedNumbers = new HashSet<>();
         int randomNum;
