@@ -2,8 +2,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashSet;
+import java.util.Random;
 
-public class GameIteractions {
+public class GameInteractions {
 
     public static void printInstruction(){
         System.out.println("\nThis is version of V.I.P. quiz or mind game!");
@@ -32,5 +34,14 @@ public class GameIteractions {
                                                                         // If we want to show TOP5 (not every team from list), where to define length
             System.out.println(String.format(String.valueOf(++count),teamName,score)); //using ++ we can increase by one and print out
         }
+    }
+    public static int randomNumber (){
+        Random rand = new Random();
+        HashSet<Integer> usedNumbers = new HashSet<>();
+        int randomNum;
+        do {
+            randomNum = rand.nextInt(8) + 1;
+        } while (!usedNumbers.add(randomNum));
+        return randomNum;
     }
 }

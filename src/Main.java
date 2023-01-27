@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
         String password = "Elite";
@@ -38,9 +37,9 @@ public class Main {
                     //   insertData(conn,newUsername,newPassword,newFullName,newEmail);
 
                 } else if (action == 'r') {
-                    GameIteractions.printInstruction(); //Done
+                    GameInteractions.printInstruction(); //Done
                 } else if (action == 't') {
-                   GameIteractions.readData();
+                   GameInteractions.readData();
                 } else {
                     //  System.out.println("Invalid input!");
                 }
@@ -50,7 +49,7 @@ public class Main {
             }
 
         } catch (Exception e) {
-            e.printStackTrace("Sorry, something went wrong!"); // gives info about - where things went wrong
+            e.printStackTrace(); // gives info about - where things went wrong
         }
     }
 }
