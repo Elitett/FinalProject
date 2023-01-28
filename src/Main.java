@@ -6,7 +6,7 @@ public class Main {
 
         String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "Elite";
+        String password = "123456";
         Scanner scanner = new Scanner(System.in);
         char again = 'y';
         try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
@@ -31,7 +31,7 @@ public class Main {
                     System.out.println("Team Two - please, enter Your team name:");
                     String newFullName = scanner.nextLine();
 
-                    System.out.println("Enter Your team member`s names (one line):l");
+                    System.out.println("Enter Your team member`s names (one line):");
                     String newEmail = scanner.nextLine();
 
                     //   insertData(conn,newUsername,newPassword,newFullName,newEmail);
@@ -40,11 +40,13 @@ public class Main {
                     GameInteractions.printInstruction(); //Done
                 } else if (action == 't') {
                    GameInteractions.readData();
-                } else {
-                    //  System.out.println("Invalid input!");
+                } else if (action == 'q') {
+                    break;
+                }else {
+                    System.out.println("Invalid input!");
                 }
 
-                System.out.println("Do You want to do more action?? y/n?");
+                System.out.println("Do You want to do something more? y/n?");
                 again = scanner.nextLine().charAt(0);
             }
 
