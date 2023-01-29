@@ -18,21 +18,27 @@ public class Main {
                 System.out.println("t - see TOP results");
                 System.out.println("q - quit");
 
-
                 char action = scanner.nextLine().charAt(0);
                 if (action == 'p') {
-
                     System.out.println("Team one - please, enter Your team name:");
                     String teamOne = scanner.nextLine();
+                    while (!Validator.isValidTeamName(teamOne)) {
+                        System.out.println("Team one is not valid, please enter again...");
+                        teamOne = scanner.nextLine();
+                    }
 
                     System.out.println("Enter Your team member`s names (one line):");
                     String teamOneMembers = scanner.nextLine();
 
                     System.out.println("Team Two - please, enter Your team name:");
-                    String newFullName = scanner.nextLine();
+                    String teamTwo = scanner.nextLine();
+                    while (!Validator.isValidTeamName(teamTwo)) {
+                        System.out.println("Team one is not valid, please enter again...");
+                        teamTwo = scanner.nextLine();
+                    }
 
                     System.out.println("Enter Your team member`s names (one line):");
-                    String newEmail = scanner.nextLine();
+                    String teamTwoMembers = scanner.nextLine();
 
                     //   insertData(conn,newUsername,newPassword,newFullName,newEmail);
 
@@ -43,7 +49,7 @@ public class Main {
                 } else if (action == 'q') {
                     break;
                 }else {
-                    System.out.println("Invalid input!");
+                    System.out.println("Invalid iput!");
                 }
 
                 System.out.println("Do You want to do something more? y/n?");
