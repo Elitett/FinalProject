@@ -49,7 +49,7 @@ public class Main {
                 } else if (action == 'q') {
                     break;
                 }else {
-                    System.out.println("Invalid iput!");
+                    System.out.println("Invalid input!");
                 }
 
                 System.out.println("Do You want to do something more? y/n?");
