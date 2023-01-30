@@ -43,9 +43,27 @@ public class GetData {
     public static int randomNumber() {
         Random rand = new Random();
         int randomNum;
+        if (usedNumbers.size() == questions.size()) {
+            usedNumbers.clear();
+        }
         do {
             randomNum = rand.nextInt(questions.size());
         } while (!usedNumbers.add(randomNum));
         return randomNum;
+    }
+
+    public static String getQuestion(int index) {
+        return questions.get(index);
+    }
+
+    public static String getAnswer(int index) {
+        return answers.get(index);
+    }
+
+    public static String getHint1(int index) {
+        return hint1.get(index);
+    }
+    public static String getHint2(int index) {
+        return hint2.get(index);
     }
 }
