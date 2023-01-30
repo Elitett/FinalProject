@@ -17,7 +17,7 @@ public class askQuestion {
         // Here I'm calling method randomNumber() from Class GetData. A random number, that doesn't repeat, will be generated
         int questionIndex = GetData.randomNumber();
 
-        System.out.println("Would you like a hint? y/n");
+      System.out.println("Would you like a hint? y/n");
         char askForHint;
         askForHint = scanner.nextLine().charAt(0);
 
