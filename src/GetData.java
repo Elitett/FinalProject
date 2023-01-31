@@ -21,7 +21,7 @@ public class GetData {
     public static void getDataFromSQL() {
         String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "123456"; // change this to your password
+        String password = "220888_Nadja"; // change this to your password
 
         try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
             Statement stmt = conn.createStatement();
