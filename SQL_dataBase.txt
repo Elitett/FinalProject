@@ -67,7 +67,5 @@ SELECT *FROM questions;
 
 -- delete table
 /*DROP TABLE IF EXISTS questions ;
-DROP TABLE IF EXISTS names ;
 DROP TABLE IF EXISTS team ;
-DROP TABLE IF EXISTS teamMembers ;
-DROP TABLE IF EXISTS result;*/
+
