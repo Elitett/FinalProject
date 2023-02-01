@@ -27,7 +27,7 @@ VALUES ('Which Baltic country has the biggest population?', 'It is the second la
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('What is the second largest city by population in Lithuania?', 'It was the temporary capital of Lithuania during the interwar period, from 1920 to 1940','It is the home of Žalgiris basketball team', 'Kaunas');
 INSERT INTO questions (question, hint1, hint2, answer)
-VALUES ('Mindaugas was the first and only person ever to have this title in history. What title is that?', 'His title was not hereditary and was not passed down through his descendants after his death in 1263','This title needed to be approved by the Pope', 'King');
+VALUES ('Mindaugas was the first and only person ever to have this title in history of Lithuania. What title is that?', 'His title was not hereditary and was not passed down through his descendants after his death in 1263','This title needed to be approved by the Pope', 'King');
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('Which Baltic country was the last in Europe to convert to Christianity?', 'Conversion happened in the 14th century', 'It is the largest Baltic country by area now', 'Lithuania');
 INSERT INTO questions (question, answer)
