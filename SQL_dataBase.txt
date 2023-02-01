@@ -23,7 +23,7 @@ SELECT * FROM team;
 INSERT INTO questions (question, hint1, hint2, answer) 
 VALUES ('What is the name of peaceful political demonstration by Baltic countries in opposition to Soviet occupation?', ' It happened on 23rd of August, 1989', 'It is one of the longest human chains ever, stretching from Vilnius to Tallin.', 'Baltic Way');
 INSERT INTO questions (question, hint1, hint2, answer)
-VALUES ('Which Baltic country has the biggest population?', 'It is the second largest Baltic country by area.', 'It is the second largest Baltic country by area.', 'Latvia');
+VALUES ('Which Baltic country has the biggest population?', 'It is the second largest Baltic country by area.', 'This country"s flag has two colors.', 'Latvia');
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('What is the second largest city by population in Lithuania?', 'It was the temporary capital of Lithuania during the interwar period, from 1920 to 1940','It is the home of Žalgiris basketball team', 'Kaunas');
 INSERT INTO questions (question, hint1, hint2, answer)
