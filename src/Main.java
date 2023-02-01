@@ -9,7 +9,7 @@ public class Main {
         String password = "220888_Nadja";
         Scanner scanner = new Scanner(System.in);
         char again = 'y';
-        try (Connection conn = DriverManager.getConnection(dbURL,username,password)) {
+        try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
 
             while (again == 'y') {
                 System.out.println("Choose Your next step =>");
@@ -21,16 +21,16 @@ public class Main {
                 char action = scanner.nextLine().charAt(0);
                 if (action == 'p') {
                     System.out.println("Team one - please, enter Your team name:");
-                    String teamName = scanner.nextLine();
-                    while (!Validator.isValidTeamName(teamName)) {
+                    String teamOne = scanner.nextLine();
+                    while (!Validator.isValidTeamName(teamOne)) {
                         System.out.println("Team one is not valid, please enter again...");
-                        teamName = scanner.nextLine();
+                        teamOne = scanner.nextLine();
                     }
 
                     System.out.println("Enter Your team member`s names (one line):");
-                    String teamMembers = scanner.nextLine();
+                    String teamOneMembers = scanner.nextLine();
 
-                  /*  System.out.println("Team Two - please, enter Your team name:");
+                    System.out.println("Team Two - please, enter Your team name:");
                     String teamTwo = scanner.nextLine();
                     while (!Validator.isValidTeamName(teamTwo)) {
                         System.out.println("Team one is not valid, please enter again...");
@@ -38,16 +38,14 @@ public class Main {
                     }
 
                     System.out.println("Enter Your team member`s names (one line):");
-                    String teamTwoMembers = scanner.nextLine();*/
+                    String teamTwoMembers = scanner.nextLine();
 
-                    //insertData(conn, teamName, teamMembers);
-
-                    //insertData(conn,,newPassword,newFullName,newEmail);
+                    //   insertData(conn,newUsername,newPassword,newFullName,newEmail);
 
                 } else if (action == 'r') {
                     GameInteractions.printInstruction(); //Done
                 } else if (action == 't') {
-                   GameInteractions.readData();
+                    GameInteractions.readData();
                 } else if (action == 'q') {
                     break;
                 }else {

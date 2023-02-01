@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 
-public class DBConnection {
+public class teamTeamNameDB {
     public static void main(String[] args) {
 
         String  dbURL = "jdbc:mysql://localhost:3306/java34";
@@ -32,45 +32,21 @@ public class DBConnection {
                         System.out.println("please enter your team members");
                         String teamMembers = scanner.nextLine();
 
-                        //   System.out.println("please, enter Your team name:");
-                        // String teamName2 = scanner.nextLine();
                         insertData(conn,teamName,teamMembers);
                     }
-                    // String teamName = scanner.nextLine();
-
-
-
-
-                    //  } else if (action == 'r') {
-                    //       GameInteractions.printInstruction();
+                      } else if (action == 'r') {
+                        //GameInteraction.printInstruction();
                 } else if (action == 't') {
-                    //       readData(conn);
+                    //       readData(conn); //read data from table team
                 } else {
                 } System.out.println("Do You want to do more action?? y/n?");
                 again = scanner.nextLine().charAt(0);
             }
-
-
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-
-    /*public static void readData (Connection conn) throws SQLException{
-        String sql = "SELECT*FROM team";
-        Statement statement = conn.createStatement();
-        ResultSet resultSet =  statement.executeQuery(sql);
-        int count = 0;
-
-        while (resultSet.next()){
-            String teamName = resultSet.getString("teamName");
-            String score = resultSet.getString("score");
-            System.out.println(String.format(String.valueOf(++count),teamName,score));
-
-        }
-
-
-    }*/
+   //to insert teamName in BD
     public static void insertData (Connection conn, String teamName, String teamMembers) throws SQLException{
         String sql = "INSERT INTO team(teamName,teamMembers) VALUE (?, ? )";
         PreparedStatement statement = conn.prepareStatement(sql);
