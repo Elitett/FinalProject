@@ -76,7 +76,6 @@ public class AskQuestion {
                                 System.out.println("Hint for 30 points: " + GetData.getHint1(questionIndex));
                                 teamPoints[a] = teamPoints[a] - 30;
                             }
-
                         } else {
                             System.out.println("Invalid input");
                         }

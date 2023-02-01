@@ -27,19 +27,21 @@ public class Main {
 
                 char action = scanner.nextLine().charAt(0);
                 if (action == 'p') {
+                    String[] teamName = new String[2];
+                    String[] teamMembers = new String[2];
 
-                   /* for (int i=0;i<2;i++ ) {
+                    for (int i=0;i<2;i++ ) {
                         System.out.println("Please, enter Your team name:");
-                        String teamName[i] = scanner.nextLine();
+                        teamName[i] = scanner.nextLine();
                         while (!Validator.isValidTeamName(teamName[i])) {
                             System.out.println("Team name is not valid, please try again...");
                             teamName[i] = scanner.nextLine();
                         }
-                        System.out.println("Please enter your team members");
-                        String teamMembers[i] = scanner.nextLine();
-                    }*/
+                        System.out.println("Please enter your team members in one line (name, name, name): ");
+                        teamMembers[i] = scanner.nextLine();
+                    }
 
-                    System.out.println("Team one - please, enter Your team name:");
+                    /*System.out.println("Team one - please, enter Your team name:");
                     String teamOne = scanner.nextLine();
 
                     while (!Validator.isValidTeamName(teamOne)) {
@@ -59,12 +61,12 @@ public class Main {
                     }
 
                     System.out.println("Enter Your team member`s names in one line (name, name, name):");
-                    String teamTwoMembers = scanner.nextLine();
+                    String teamTwoMembers = scanner.nextLine();*/
 
-                    AskQuestion.askQuestion(teamOne, teamTwo, teamOneMembers, teamTwoMembers);
+                    AskQuestion.askQuestion(teamName[0], teamName[1], teamMembers[0], teamMembers[1]);
 
                 } else if (action == 'r') {
-                    GameInteractions.printInstruction(); //Done
+                    GameInteractions.printInstruction();
                 } else if (action == 't') {
                     GameInteractions.readData(conn);
                 } else if (action == 'q') {
@@ -78,7 +80,7 @@ public class Main {
             }
 
         } catch (Exception e) {
-            e.printStackTrace(); // gives info about - where things went wrong
+            e.printStackTrace();
         }
     }
 }

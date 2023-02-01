@@ -15,8 +15,8 @@ public class GameInteractions {
         System.out.println("\t - Incorrect answer costs 150 points");
         System.out.println("\t - If team uses a hint, they lose a certain number of points (hint's value)");
         System.out.println("\t - If team uses a hint, but answer is incorrect, they lose hint's value and additional 150 points");
-        System.out.println("\t - Team with biggest score wins\n");
-        System.out.println("\t - Answers should be written in English");
+        System.out.println("\t - Team with biggest score wins");
+        System.out.println("\t - Answers should be written in English\n");
     }
 
     public static void readData(Connection conn) throws SQLException {
