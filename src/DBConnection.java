@@ -1,3 +1,5 @@
+package db;
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -5,7 +7,7 @@ import java.util.Scanner;
 public class DBConnection {
     public static void main(String[] args) {
 
-        String  dbURL = "jdbc:mysql://localhost:3306/final_project_3401";
+        String  dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
         String password = "220888_Nadja";
         Scanner scanner = new Scanner(System.in);
@@ -24,24 +26,25 @@ public class DBConnection {
                 char action = scanner.nextLine().charAt(0);
                 if (action == 'p') {
 
-                   // for (int i=0;i<2;i++ ){
+                    for (int i=0;i<2;i++ ){
                         System.out.println("please, enter Your team name:");
                         String teamName = scanner.nextLine();
-                        System.out.print("please enter your team members");
+                        System.out.println("please enter your team members");
                         String teamMembers = scanner.nextLine();
+
                         //   System.out.println("please, enter Your team name:");
-                       // String teamName2 = scanner.nextLine();
-                        insertData(conn, teamName,teamMembers );
-                   // }
-                   // String teamName = scanner.nextLine();
+                        // String teamName2 = scanner.nextLine();
+                        insertData(conn,teamName,teamMembers);
+                    }
+                    // String teamName = scanner.nextLine();
 
 
 
 
-               } else if (action == 'r') {
-                    GameInteractions.printInstruction();
+                    //  } else if (action == 'r') {
+                    //       GameInteractions.printInstruction();
                 } else if (action == 't') {
-                    readData(conn);
+                    //       readData(conn);
                 } else {
                 } System.out.println("Do You want to do more action?? y/n?");
                 again = scanner.nextLine().charAt(0);
@@ -53,8 +56,8 @@ public class DBConnection {
         }
     }
 
-    public static void readData (Connection conn) throws SQLException{
-        String sql = "SELECT * FROM result";
+    /*public static void readData (Connection conn) throws SQLException{
+        String sql = "SELECT*FROM team";
         Statement statement = conn.createStatement();
         ResultSet resultSet =  statement.executeQuery(sql);
         int count = 0;
@@ -67,13 +70,13 @@ public class DBConnection {
         }
 
 
-    }
+    }*/
     public static void insertData (Connection conn, String teamName, String teamMembers) throws SQLException{
-        String sql = "INSERT INTO team(teamName,teamMembers, Score) VALUE (?, ? , ? )";
+        String sql = "INSERT INTO team(teamName,teamMembers) VALUE (?, ? )";
         PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setString(2,teamName);
-        statement.setString(3,teamMembers);
-      //  statement.setInt(4,Score);
+        statement.setString(1,teamName);
+        statement.setString(2,teamMembers);
+        // statement.setInt(4,score);
 
         int rowInserted = statement.executeUpdate();
 
@@ -84,6 +87,6 @@ public class DBConnection {
         }
 
 
-   }
+    }
 }
 

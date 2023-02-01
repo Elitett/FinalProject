@@ -27,8 +27,8 @@ public class GameInteractions {
         int count = 0;
 
         while(resultSet.next()){
-            String teamName = resultSet.getString("fullname");
-            String score = resultSet.getString("email");
+            String teamName = resultSet.getString("teamName");
+            String score = resultSet.getString("score");
                                                                         // If we want to show TOP5 (not every team from list), where to define length
             System.out.println(String.format(String.valueOf(++count),teamName,score)); //using ++ we can increase by one and print out
         }

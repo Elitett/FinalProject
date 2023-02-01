@@ -19,7 +19,7 @@ public class GetData {
     static HashSet<Integer> usedNumbers = new HashSet<>();
 
     public static void getDataFromSQL() {
-        String dbURL = "jdbc:mysql://localhost:3306/java34";
+        String dbURL = "jdbc:mysql://localhost:3306/final_project_3401";
         String username = "root";
         String password = "220888_Nadja"; // change this to your password
 
