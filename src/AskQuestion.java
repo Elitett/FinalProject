@@ -7,7 +7,7 @@ public class AskQuestion {
     public static void askQuestion(String teamOne, String teamTwo, String teamOneMembers, String teamTwoMembers) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "123456"; // change this to your password
+        String password = "220888_Nadja"; // change this to your password
         Connection conn = DriverManager.getConnection(dbURL,username,password);
         Scanner scanner = new Scanner(System.in);
         String answer;

@@ -6,7 +6,7 @@ public class Main {
 
         String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "123456";
+        String password = "220888_Nadja";
         GetData.getDataFromSQL();
         Scanner scanner = new Scanner(System.in);
         char again = 'y';
@@ -60,6 +60,8 @@ public class Main {
 
                     System.out.println("Enter Your team member`s names in one line (name, name, name):");
                     String teamTwoMembers = scanner.nextLine();
+
+                    System.out.println("Let's start the game!");
 
                     AskQuestion.askQuestion(teamOne, teamTwo, teamOneMembers, teamTwoMembers);
 

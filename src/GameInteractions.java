@@ -49,7 +49,7 @@ public class GameInteractions {
         int rowInserted = statement.executeUpdate();
 
         if(rowInserted > 0){
-            System.out.println("Your score is registered in database!");
+           // System.out.println("Your score is registered in database!");
         }else {
             System.out.println("Invalid input!");
         }
