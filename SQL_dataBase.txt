@@ -60,11 +60,6 @@ VALUES('What was pictured on 5 lats paper banknote', 'Banknote was green','Latvi
 SELECT * FROM questions;
 
 
-
-
-
-
 -- delete table
 /*DROP TABLE IF EXISTS questions ;
 DROP TABLE IF EXISTS team ;
-
