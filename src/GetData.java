@@ -1,10 +1,6 @@
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Random;
 
 public class GetData {
@@ -19,9 +15,9 @@ public class GetData {
     static HashSet<Integer> usedNumbers = new HashSet<>();
 
     public static void getDataFromSQL() {
-        String dbURL = "jdbc:mysql://localhost:3306/final_project_3401";
+        String dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "220888_Nadja"; // change this to your password
+        String password = "123456"; // change this to your password
 
         try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
             Statement stmt = conn.createStatement();

@@ -16,11 +16,11 @@ public class Validator {
 
     public static boolean isValidEmail(String email) {
         return validate(email, EMAIL_PATTERN);
-    }
+    } // we probably don't need this
 
     public static boolean isValidName(String name) {
         return validate(name, NAME_PATTERN);
-    }
+    } // could be changed to validate teamMembers
 
     public static boolean isValidTeamName(String name) {
         return validate(name, TEAM_PATTERN);

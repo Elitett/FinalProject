@@ -9,7 +9,7 @@ public class teamTeamNameDB {
 
         String  dbURL = "jdbc:mysql://localhost:3306/java34";
         String username = "root";
-        String password = "220888_Nadja";
+        String password = "123456";
         Scanner scanner = new Scanner(System.in);
         char again = 'y';
 
