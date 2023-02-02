@@ -35,7 +35,7 @@ public class GameInteractions {
             String Score = String.valueOf(resultSet.getInt(4));
 
             String output = "%d. %s ~ %s ~ %s points";
-            System.out.println(String.format(output, ++count, teamName, teamMembers, Score)); //using ++ we can increase by one and print out
+            System.out.printf((output) + "%n", ++count, teamName, teamMembers, Score);
         }
     }
 
@@ -48,10 +48,8 @@ public class GameInteractions {
 
         int rowInserted = statement.executeUpdate();
 
-        if(rowInserted > 0){
-            System.out.println("Your score is registered in database!");
-        }else {
-            System.out.println("Invalid input!");
+        if(rowInserted < 0){
+          System.out.println("Something went wrong with data insertion!");
         }
     }
 }

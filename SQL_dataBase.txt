@@ -23,11 +23,11 @@ SELECT * FROM team;
 INSERT INTO questions (question, hint1, hint2, answer) 
 VALUES ('What is the name of peaceful political demonstration by Baltic countries in opposition to Soviet occupation?', ' It happened on 23rd of August, 1989', 'It is one of the longest human chains ever, stretching from Vilnius to Tallin.', 'Baltic Way');
 INSERT INTO questions (question, hint1, hint2, answer)
-VALUES ('Which Baltic country has the biggest population?', 'It is the second largest Baltic country by area.', 'It is the second largest Baltic country by area.', 'Latvia');
+VALUES ('Which Baltic country has the biggest population?', 'It is the second largest Baltic country by area.', 'This country"s flag has two colors.', 'Latvia');
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('What is the second largest city by population in Lithuania?', 'It was the temporary capital of Lithuania during the interwar period, from 1920 to 1940','It is the home of Žalgiris basketball team', 'Kaunas');
 INSERT INTO questions (question, hint1, hint2, answer)
-VALUES ('Mindaugas was the first and only person ever to have this title in history. What title is that?', 'His title was not hereditary and was not passed down through his descendants after his death in 1263','This title needed to be approved by the Pope', 'King');
+VALUES ('Mindaugas was the first and only person ever to have this title in history of Lithuania. What title is that?', 'His title was not hereditary and was not passed down through his descendants after his death in 1263','This title needed to be approved by the Pope', 'King');
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('Which Baltic country was the last in Europe to convert to Christianity?', 'Conversion happened in the 14th century', 'It is the largest Baltic country by area now', 'Lithuania');
 INSERT INTO questions (question, answer)
@@ -38,8 +38,8 @@ INSERT INTO questions (question, answer)
 VALUES ('Which is the longest river in Latvia?', 'Gauja');
 INSERT INTO questions (question, hint1, answer) 
 VALUES ('What is the second largest city by population in Latvia?', 'One of its names was Dinaburg', 'Daugavpils');
-INSERT INTO questions (question, hint1, answer)
-VALUES ('Latvian Song and Dance festival has been held since 1873. Where it has been held?' ,'it is a part of the UNESCO Masterpieces of the Oral and Intangible Heritage of Humanity list since 2008', 'It is one of the largest amateur events of this kind in the world', 'Riga');
+INSERT INTO questions (question, answer)
+VALUES ('Latvian Song and Dance festival has been held since 1873. Where it has been held?', 'Riga');
 INSERT INTO questions (question, hint1, hint2, answer)
 VALUES ('What is the highest mountain peak in Latvia?', 'It is 311m', ' It is located in Vidzemes Highlands in eastern Latvia', 'Gaizinkalns');
 INSERT INTO questions (question, hint1, hint2, answer)
@@ -60,11 +60,6 @@ VALUES('What was pictured on 5 lats paper banknote', 'Banknote was green','Latvi
 SELECT * FROM questions;
 
 
-
-
-
-
 -- delete table
 /*DROP TABLE IF EXISTS questions ;
 DROP TABLE IF EXISTS team ;
-

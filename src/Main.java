@@ -31,8 +31,9 @@ public class Main {
                     String[] teamMembers = new String[2];
 
                     for (int i=0;i<2;i++ ) {
-                        System.out.println("Please, enter Your team name:");
+                        System.out.println("Team "+ (i+1) +" please, enter Your team name:");
                         teamName[i] = scanner.nextLine();
+
                         while (!Validator.isValidTeamName(teamName[i])) {
                             System.out.println("Team name is not valid, please try again...");
                             teamName[i] = scanner.nextLine();
@@ -41,28 +42,7 @@ public class Main {
                         teamMembers[i] = scanner.nextLine();
                     }
 
-                    /*System.out.println("Team one - please, enter Your team name:");
-                    String teamOne = scanner.nextLine();
-
-                    while (!Validator.isValidTeamName(teamOne)) {
-                        System.out.println("Team name is not valid, please try again...");
-                        teamOne = scanner.nextLine();
-                    }
-
-                    System.out.println("Enter Your team member`s names in one line (name, name, name):");
-                    String teamOneMembers = scanner.nextLine();
-
-                    System.out.println("Team Two - please, enter Your team name:");
-                    String teamTwo = scanner.nextLine();
-
-                    while (!Validator.isValidTeamName(teamTwo)) {
-                        System.out.println("Team name is not valid, please try again...");
-                        teamTwo = scanner.nextLine();
-                    }
-
-                    System.out.println("Enter Your team member`s names in one line (name, name, name):");
-                    String teamTwoMembers = scanner.nextLine();*/
-
+                    System.out.println("Let's start the game!");
                     AskQuestion.askQuestion(teamName[0], teamName[1], teamMembers[0], teamMembers[1]);
 
                 } else if (action == 'r') {
@@ -77,8 +57,12 @@ public class Main {
 
                 System.out.println("Do You want to do something more? y/n");
                 again = scanner.nextLine().charAt(0);
-            }
 
+                while (again != 'y' && again != 'n') {
+                    System.out.println("Invalid input. Please enter 'y' or 'n':");
+                    again = scanner.nextLine().charAt(0);
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
